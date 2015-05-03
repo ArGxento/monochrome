@@ -1,4 +1,6 @@
 #pragma once
+#include<vector>
+#include "object.hpp"
 class GameManager{
 public:
 	enum Stage{
@@ -9,6 +11,10 @@ public:
 		GameOver,
 		GameClear
 	};
+	std::vector<Mirror> mirrorGroup;
+	Ray playerRay;
+	bool isRayEnable = true; //Œõ‚ª”½Ë‚·‚é‚©”Û‚©‚Ì‘®«
+
 private:
 	Stage _nowStage;
 	int _frame;
