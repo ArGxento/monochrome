@@ -1,1 +1,13 @@
 #include "gameManager.hpp"
+void GameManager::_MoveLoad(){}
+void GameManager::_MoveTitle(){}
+void GameManager::_MoveStageSelect(){}
+void GameManager::_MoveMain(){}
+void GameManager::_MoveGameOver(){}
+void GameManager::_MoveGameClear(){}
+void GameManager::_DrawLoad(){}
+void GameManager::_DrawTitle(){}
+void GameManager::_DrawStageSelect(){}
+void GameManager::_DrawMain(){}
+void GameManager::_DrawGameOver(){}
+void GameManager::_DrawGameClear(){}

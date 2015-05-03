@@ -1,5 +1,5 @@
 #include <DxLib.h>
-#include "fps.h"
+#include "fps.hpp"
 #include "gameManager.hpp"
 //#include "object.hpp"
 #include<fstream>
