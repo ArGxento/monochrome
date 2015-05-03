@@ -72,7 +72,7 @@ public:
 			_DrawGameClear();
 			break;
 		default:
-			_MoveLoad();
+			_DrawLoad();
 			break;
 		}
 	}
