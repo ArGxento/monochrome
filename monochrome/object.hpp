@@ -24,6 +24,7 @@ private:
 class Ray {
 public:
 	static const int radius = 32;
+	static const int speed = 3;
 	Vector location;
 	Vector vector;
 	bool isHittable;
@@ -60,6 +61,11 @@ public:
 	Vector getRefrectVec(Mirror const& m) const {
 
 
+	}
+
+	void Move(){
+		location.x += vector.x;
+		location.y += location.y;
 	}
 private:
 	Ray() {}
