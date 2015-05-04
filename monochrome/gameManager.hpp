@@ -13,7 +13,16 @@ public:
 	};
 	std::vector<Mirror> mirrorGroup;
 	Ray playerRay;
-	bool isRayEnable = true; //Œõ‚ª”½Ë‚·‚é‚©”Û‚©‚Ì‘®«
+	std::vector<Ray> recordRay;
+	std::vector<Ray> replayRay;
+	Vector start;
+	double startRad;
+	Vector goal;
+	//bool isRayEnable = true; //Œõ‚ª”½Ë‚·‚é‚©”Û‚©‚Ì‘®«
+
+	int imgRayOn;
+	int imgRayOff;
+	int imgMirror;
 
 private:
 	Stage _nowStage;
@@ -88,6 +97,18 @@ public:
 	}
 	GameManager(){
 		SetStage(Load);
-
 	}
+	Vector GenerateRandomPos(int restrictArea);
+	bool IsInScreen(Vector pos , int restrictArea = 64){
+		if (pos.x >= restrictArea &&
+			pos.x <= 640 - restrictArea &&
+			pos.y >= restrictArea &&
+			pos.y <= 480 - restrictArea){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	void GenerateRandomMap(int correctMirrorNum, int DummyMirrorNum);
 };

@@ -27,7 +27,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		return -1;	// エラーが起きたら直ちに終了
 	}
 	ChangeFontType(DX_FONTTYPE_ANTIALIASING_EDGE);
-	SetMouseDispFlag(TRUE);
+	//SetMouseDispFlag(TRUE);
+	SetDrawBlendMode(DX_BLENDMODE_ADD,255);
 	gameManager.SetStage(gameManager.Load);
 	for (;;){ //メインループ
 		ClearDrawScreen();
